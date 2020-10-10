@@ -1,0 +1,54 @@
+<page-document-view>
+  <editor ref={ ref('document') } content={ props.page.get('data.document') } on-update={ (e) => onChange(e) } />
+
+  <script>
+
+    export default class PageApplicationView {
+
+      /**
+       * get props
+       */
+      getProps() {
+        // get props
+        const props = { ...(this.props) };
+
+        // delete unwanted
+        delete props.view;
+        delete props.type;
+        delete props.struct;
+
+        // return fixed
+        return props;
+      }
+
+      /**
+       * on color
+       */
+      onChange(e) {
+        // set color
+        this.props.data('document', this.refs.document.val());
+      }
+
+
+      // ////////////////////////////////////////////////////////////////////////////
+      //
+      // MISC METHODS
+      //
+      // ////////////////////////////////////////////////////////////////////////////
+
+      /**
+       * ref
+       */
+      ref(name) {
+        // set refs
+        if (!this.refs) this.refs = {};
+
+        // return ref function
+        return (that) => {
+          // set ref
+          this.refs[name] = that;
+        };
+      }
+    }
+  </script>
+</page-document-view>
