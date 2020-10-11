@@ -1,0 +1,54 @@
+<block-document-config>
+  <div>
+    <div class="mb-3">
+      <label class="form-label">
+        Name
+      </label>
+      <input name="name" class="form-control" type="text" value={ props.block.name || '' } onchange={ (e) => onName(e) } />
+    </div>
+  </div>
+
+  <script>
+
+    // export config
+    export default class BlockDocumentConfig {
+
+
+      // ////////////////////////////////////////////////////////////////////////////
+      //
+      // Riot Methods
+      //
+      // ////////////////////////////////////////////////////////////////////////////
+
+      /**
+       * on before mount
+       *
+       * @param {Object} props
+       */
+      onBeforeMount() {
+        // bind
+        this.onName = this.onName.bind(this);
+      }
+      
+
+
+      // ////////////////////////////////////////////////////////////////////////////
+      //
+      // Config Methods
+      //
+      // ////////////////////////////////////////////////////////////////////////////
+
+      /**
+       * on color
+       */
+      onName(e) {
+        // prevent
+        e.preventDefault();
+        e.stopPropagation();
+
+        // set color
+        this.props.set('name', e.target.value);
+      }
+    }
+  </script>
+</block-document-config>

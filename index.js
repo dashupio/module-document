@@ -3,6 +3,7 @@ const { Module } = require('@dashup/module');
 
 // import base
 const DocumentPage = require('./pages/document');
+const DocumentBlock = require('./blocks/document');
 
 /**
  * export module
@@ -25,6 +26,9 @@ class DocumentModule extends Module {
   register(fn) {
     // register pages
     fn('page', DocumentPage);
+
+    // register blocks
+    fn('block', DocumentBlock);
   }
 }
 
