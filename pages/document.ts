@@ -60,6 +60,7 @@ export default class DocumentPage extends Struct {
     // return object of views
     return {
       view   : 'page/document/view',
+      menu   : 'page/document/menu',
       config : 'page/document/config',
     };
   }

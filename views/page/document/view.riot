@@ -1,5 +1,8 @@
 <page-document-view>
-  <editor ref={ ref('document') } content={ props.page.get('data.document') } on-update={ (e) => onChange(e) } />
+  <div>
+    <editor if={ props.altering } ref={ ref('document') } class="editor-hidden" content={ props.page.get('data.document') } on-update={ (e) => onChange(e) } />
+    <editor-render if={ !props.altering } ref={ ref('document') } class="editor-hidden" content={ props.page.get('data.document') } />
+  </div>
 
   <script>
 
@@ -51,4 +54,14 @@
       }
     }
   </script>
+
+  <style>
+    .ql-container.ql-bubble .ql-editor {
+      color         : var(--body);
+      border        : 0;
+      padding       : 0;
+      background    : transparent;
+      border-radius : 0;
+    }
+  </style>
 </page-document-view>
