@@ -1,6 +1,6 @@
 <page-document-menu>
   <button if={ props.dashup.can(props.page, 'manage') } class={ `ml-2 btn btn-${!props.altering ? 'outline-' : ''}primary` } onclick={ (e) => onPreview(e) }>
-    <i class={ `fa fa-${!props.altering ? 'pencil' : 'check'} mr-2` } /> { !props.altering ? 'Alter Form' : 'Finish Altering' }
+    <i class={ `fa fa-${!props.altering ? 'pencil' : 'check'} mr-2` } /> { !props.altering ? 'Alter Document' : 'Finish Altering' }
   </button>
 
   <script>
