@@ -32,7 +32,7 @@ export default class DocumentPage extends Struct {
    */
   get icon() {
     // return page type label
-    return 'fa fa-server';
+    return 'fa fa-file-alt';
   }
 
   /**
@@ -70,7 +70,7 @@ export default class DocumentPage extends Struct {
    */
   get categories() {
     // return array of categories
-    return ['API'];
+    return ['View'];
   }
 
   /**
@@ -78,7 +78,7 @@ export default class DocumentPage extends Struct {
    */
   get description() {
     // return description string
-    return 'Document with specific access';
+    return 'Documentation view page';
   }
 
   /**
