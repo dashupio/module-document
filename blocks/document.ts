@@ -55,7 +55,7 @@ export default class DocumentBlock extends Struct {
    */
   get categories() {
     // return array of categories
-    return ['frontend'];
+    return ['dashboard'];
   }
 
   /**

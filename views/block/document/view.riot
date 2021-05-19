@@ -1,5 +1,5 @@
 <block-document-view>
-  <div class="card flex-1">
+  <div class="card h-100">
     <div if={ props.block.name } class="card-header">
       { props.block.name }
     </div>
@@ -17,7 +17,7 @@
        */
       onChange(e) {
         // set color
-        this.props.set('content', this.refs.document.val());
+        this.props.set('content', this.refs.document.val(), true);
       }
 
 
