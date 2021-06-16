@@ -45,8 +45,7 @@ export default class DocumentBlock extends Struct {
   get views() {
     // return object of views
     return {
-      view   : 'block/document/view',
-      config : 'block/document/config',
+      view : 'block/document',
     };
   }
 
