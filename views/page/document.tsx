@@ -23,7 +23,6 @@ const PageDocument = (props = {}) => {
           </button>
         ) }
       </Page.Menu>
-      SUB MENU
       <Page.Body>
         EDITOR
       </Page.Body>
