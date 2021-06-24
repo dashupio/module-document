@@ -7,13 +7,13 @@ const BlockDocument = (props = {}) => {
 
   // return jsx
   return (
-    <div class="card h-100">
+    <div className="card h-100">
       { !!props.block.label && (
-        <div class="card-header">
+        <div className="card-header">
           { props.block.label }
         </div>
       ) }
-      <div class="card-body p-0 d-flex">
+      <div className="card-body p-0 d-flex">
         EDITOR TODO
       </div>
     </div>
