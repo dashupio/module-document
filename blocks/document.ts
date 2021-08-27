@@ -20,7 +20,7 @@ export default class DocumentBlock extends Struct {
    */
   get icon() {
     // return page type label
-    return 'fa fa-document-line';
+    return 'fad fa-file-alt';
   }
 
   /**
@@ -28,7 +28,7 @@ export default class DocumentBlock extends Struct {
    */
   get title() {
     // return page type label
-    return 'Document Block';
+    return 'Document';
   }
 
   /**
@@ -62,6 +62,6 @@ export default class DocumentBlock extends Struct {
    */
   get description() {
     // return description string
-    return 'Store notes in a handy block';
+    return 'Documentation or Notes Block';
   }
 }

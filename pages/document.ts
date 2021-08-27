@@ -32,7 +32,7 @@ export default class DocumentPage extends Struct {
    */
   get icon() {
     // return page type label
-    return 'fa fa-file-alt';
+    return 'fad fa-file-alt text-info';
   }
 
   /**
@@ -40,7 +40,7 @@ export default class DocumentPage extends Struct {
    */
   get title() {
     // return page type label
-    return 'Document Page';
+    return 'Document';
   }
 
   /**
@@ -68,7 +68,7 @@ export default class DocumentPage extends Struct {
    */
   get categories() {
     // return array of categories
-    return ['View'];
+    return ['Misc'];
   }
 
   /**
@@ -76,7 +76,7 @@ export default class DocumentPage extends Struct {
    */
   get description() {
     // return description string
-    return 'Documentation view page';
+    return 'Internal documentation view';
   }
 
   /**
