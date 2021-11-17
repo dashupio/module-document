@@ -18,7 +18,7 @@
     "@babel/preset-env": "^7.11.5",
     "@dashup/core": "^1.2.1",
     "@dashup/eslint-config-dashup": "0.0.1",
-    "@dashup/module": "^2.0.5",
+    "@dashup/module": "^2.0.12",
     "@dashup/ui": "0.0.1",
     "@editorjs/code": "^2.7.0",
     "@editorjs/delimiter": "^1.2.0",

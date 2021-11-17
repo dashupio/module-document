@@ -1,9 +1,9 @@
 
 // import react
-import { Page } from '@dashup/ui';
 import shortid from 'shortid';
 import EditorJs from 'react-editor-js';
 import React, { useState } from 'react';
+import { Box, Page, Button, Container } from '@dashup/ui';
 
 // import base
 import Link from '@editorjs/link';
@@ -97,15 +97,14 @@ const PageDocument = (props = {}) => {
 
       <Page.Menu onConfig={ () => setConfig(true) } presence={ props.presence } onShare={ () => setShare(true) }>
         { props.dashup.can(props.page, 'manage') && (
-          <button className={ `me-2 btn btn-${!updating ? 'link text-dark' : 'primary'}` } onClick={ (e) => setUpdating(!updating) }>
-            <i className={ `fat fa-${!updating ? 'pencil' : 'check'} me-2` } />
-            { !updating ? 'Update Document' : 'Finish Updating' }
-          </button>
+          <Button variant="contained" color={ updating ? 'success' : 'primary' } onClick={ () => setUpdating(!updating) }>
+            { updating ? 'Finish' : 'Update Document' }
+          </Button>
         ) }
       </Page.Menu>
       <Page.Body>
         { updating ? (
-          <div className="flex-1 d-flex fit-content">
+          <Container>
             <EditorJs
               tools={ {
                 code      : Code,
@@ -154,9 +153,11 @@ const PageDocument = (props = {}) => {
                 });
               }, 100) }
             />
-          </div>
+          </Container>
         ) : (
-          <div className="container" dangerouslySetInnerHTML={ { __html : (props.page.get('data.html') ? props.page.get('data.html').join('') : null) || props.page.get('data.document') || '' } } />
+          <Container>
+            <Box dangerouslySetInnerHTML={ { __html : (props.page.get('data.html') ? props.page.get('data.html').join('') : null) || props.page.get('data.document') || '' } } />
+          </Container>
         ) }
       </Page.Body>
     </Page>
